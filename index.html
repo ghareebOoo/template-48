@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="popup d-none" id="popup">
+        <div class="icon">
+            <div class="circle">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <span id="x">x</span>
+        </div>
+        <p>Site Name or Url is not valid, Please follow the rules below :</p>
+        <div class="listen">
+            <h3><i class="fa-solid fa-arrow-right"></i>The first must be a capital letter</h3>
+            <h3><i class="fa-solid fa-arrow-right"></i>Site URL must be a valid one</h3>
+        </div>
+    </div>
+    <div class="page" id="page">
+        <div class="container">
+           <h1>Bookmarker</h1>
+           <div class="bookmark">
+            <div class="top">
+                <i class="fa-solid fa-bookmark"></i>
+                <h2>Bookmark your favorite sites</h2>
+                <i class="fa-solid fa-bookmark"></i>
+            </div>
+            <form class="form-floating">
+                <div class="site-name">
+                    <label for="site">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        Site Name
+                    </label>
+                    <input id="site" placeholder="Bookmark Name" class="form-control"/>
+                </div>
+                <div class="site-url">
+                    <label for="url">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input id="url" placeholder="Website URL" class="form-control" />
+                </div>
+                <button type="button" id="submit">Submit</button>
+            </form>
+           </div>
+           <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyTable">
+                </tbody>
+            </table>
+           </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

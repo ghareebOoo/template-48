@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #f7ecde;
+}
+.popup{
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.popup .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup span{
+   font-weight: bold;
+   cursor: pointer;
+}
+.popup .circle svg:nth-child(1){
+    color: red;
+}
+.popup .circle svg:nth-child(2){
+    color: orange;
+}
+.popup .circle svg:nth-child(3){
+    color: green;
+}
+.popup p{
+    font-family: "Righteous", cursive;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.popup h3{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.popup .listen svg{
+    margin-right: 10px;
+    color: #9c27b0;
+    border: 2px solid #9c27b0;
+    padding: 5px;
+    border-radius: 50%;
+}
+.page{
+    padding: 30px;
+}
+.container h1{
+    font-family: "Pacifico", cursive;
+    font-size: 40px;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+.container h1::before{
+    content: "";
+    position: absolute;
+    background-color: #fec260;
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.container h1:hover::before{
+    height: 40px;
+}
+.container .bookmark{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    border-width: 3px 0px 3px 0px;
+    border-style: dashed;
+}
+.container .bookmark .top{
+    font-family: "Righteous", cursive;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+@media(max-width: 767px){
+    .container .bookmark .top{
+        display: block;
+    }
+}
+.container .bookmark .top svg{
+    font-size: 30px;
+}
+.container .bookmark .top svg:first-child{
+    color: #3ca55c;
+}
+.container .bookmark .top svg:last-child{ 
+    color: #b5ac49;
+}
+form{
+    margin-top: 30px;
+}
+form .site-name , form .site-url{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form label{
+    font-weight: bold;
+}
+form .site-url{
+    margin-top: 20PX;
+}
+form .site-name i{
+    margin-right: 10px;
+}
+form input{
+   padding: 10px;
+   outline: none;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   transition: 0.5s;
+}
+form input:focus{
+    box-shadow: 0 0 0 4px #fec260c7;
+}
+form button{
+    display: block;
+    margin: auto;
+    background-color: #d1512d;
+    color: white;
+    margin-top: 30px;
+    padding: 5px 40px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s;    
+}
+form button:hover{
+    background-color: #d1512dab;
+}
+.table{
+    margin-top: 20px;
+}
+table{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+table thead tr th{
+    font-size: 20px;
+    padding: 5px;
+}
+@media(max-width: 767px){
+    table thead tr th{
+        font-size: 12px;
+    }
+}
+table tbody tr{
+    margin-top: 20px;
+}
+table tbody tr td:nth-child(3) , table tbody tr td:nth-child(4){
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+table tbody tr td:nth-child(3):hover button{
+   background-color: #9eb23bdb;
+}
+table tbody tr td:nth-child(4):hover button{
+    background-color: #eb1d36bf;
+}
+table tbody tr td h3{
+    font-size: 20px;
+}
+table td{
+    padding: 5px;
+}
